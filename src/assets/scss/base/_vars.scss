@@ -1,0 +1,33 @@
+/* CONTAINER */
+$container-width: 100%;
+$container-padding-x: .75rem;
+
+/* TEXT */
+
+$color-gray-600: #262626;
+$color-gray-500: #4A4A4A;
+$color-gray-400: #6E6E6E;
+$color-gray-300: #939393;
+$color-gray-200: #B7B7B7;
+$color-gray-100: #DBDBDB;
+$color-gray-50: #F5F5F5;
+
+$color-orange-600: #FF8A00;
+$color-orange-500: #FF9D2B;
+$color-orange-400: #FFB155;
+$color-orange-300: #FFC480;
+$color-orange-200: #FFD8AA;
+$color-orange-100: #FFEBD4;
+
+$color-red-300: #BB342F;
+$color-red-200: #DA706C;
+$color-red-100: #EDB7B5;
+
+$color-green-300: #20BF55;
+$color-green-200: #5BE489;
+$color-green-100: #ADF1C4;
+
+
+@function responsiveText($from: 24, $to: 14, $startResponse: 1920, $endResponse: 320) {
+  @return calc(#{$from}px + ($from - $to) * (100vw - #{$startResponse}px) / ($startResponse - $endResponse));
+}

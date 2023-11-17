@@ -1,0 +1,122 @@
+@import '../base/vars';
+@import "../layouts/btn";
+
+.contacts_content {
+
+  .top_text {
+    color: $color-gray-600;
+    font-family: Gilroy;
+    font-size: responsiveText(32, 18);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: -0.5px;
+    margin-bottom: responsiveText(40, 20);
+  }
+
+  .contacts {
+    display: flex;
+    align-items: center;
+    gap: responsiveText(40, 20);
+    flex-wrap: wrap;
+    margin-bottom: responsiveText(100, 50);
+
+    a {
+      color: $color-gray-600;
+      font-family: Gilroy;
+      font-size: responsiveText(32, 18);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: -0.5px;
+    }
+
+  }
+
+  .form_block {
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+
+    .contact_form {
+
+      em.wpforms-error {
+        display: none!important;
+      }
+
+      .mailcheck-error {
+        display: none!important;
+      }
+
+      .wpforms-field-label, input {
+        color: $color-gray-600;
+        font-family: Gilroy;
+        font-size: responsiveText(18, 16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%;
+        letter-spacing: -0.5px;
+      }
+
+      input, textarea {
+        border: none;
+        border-bottom: 1px solid #DBDBDB;
+        border-radius: 0;
+      }
+
+      input {
+        height: 60px;
+
+        &:focus {
+          border: none;
+          border-bottom: 1px solid #ff8a00;
+          border-radius: 0;
+          box-shadow: none;
+        }
+
+        &.wpforms-error {
+          border: none!important;
+          border-bottom: 2px solid #d63637!important;
+          border-radius: 0!important;
+          box-shadow: none!important;
+
+          &:focus {
+            border: none!important;
+            border-bottom: 1px solid #d63637!important;
+            border-radius: 0!important;
+            box-shadow: none!important;
+          }
+        }
+
+      }
+
+      textarea {
+
+        &:focus {
+          border: none;
+          border-bottom: 1px solid #ff8a00;
+          border-radius: 0;
+          box-shadow: none;
+        }
+
+        &.wpforms-error {
+          border: none!important;
+          border-bottom: 2px solid #d63637!important;
+          border-radius: 0!important;
+          box-shadow: none!important;
+
+          &:focus {
+            border: none!important;
+            border-bottom: 1px solid #d63637!important;
+            border-radius: 0!important;
+            box-shadow: none!important;
+          }
+        }
+
+      }
+
+
+    }
+
+  }
+}

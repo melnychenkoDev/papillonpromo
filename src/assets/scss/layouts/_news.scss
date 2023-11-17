@@ -1,0 +1,117 @@
+.news_posts_wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  .news_item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px 0;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #fff;
+    transition: .3s ease-in-out;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #b7b7b7;
+    }
+
+    &_title {
+      font-family: Gilroy;
+      font-size: responsiveText(32, 16);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+      cursor: pointer;
+      transition: .3s ease-in-out;
+      color: $color-gray-600;
+      max-width: 900px;
+    }
+
+    &_img {
+      display: none;
+    }
+
+    &_date {
+      text-align: end;
+      color: $color-gray-400;
+      font-family: Gilroy;
+      font-size: responsiveText(18, 12);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      flex-grow: 1;
+      text-wrap: nowrap;
+    }
+
+  }
+
+  @media (min-width: 768px) {
+    .news_item {
+      min-height: 220px;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      padding: 35px 0;
+
+      &_img {
+        display: inline-block;
+        max-width: 225px;
+        height: max-content;
+        width: 0;
+        transition: width .6s ease-in-out;
+      }
+
+      &:hover {
+        .news_item_img {
+          width: 100%;
+          //height: auto;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .news_item {
+      gap: 30px;
+      padding: 45px 0;
+    }
+  }
+
+}
+
+.single_content {
+
+  &_img {
+    margin: 0 auto;
+  }
+
+  &_text {
+    display: flex;
+    flex-direction: column;
+    gap: responsiveText(20, 10);
+    margin-top: responsiveText(30, 10);
+
+    strong {
+      color: $color-gray-600;
+      font-family: Gilroy;
+      font-size: responsiveText(24, 18);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%;
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      color: $color-gray-600;
+      font-family: Gilroy;
+      font-size: responsiveText(24, 18);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: -0.5px;
+    }
+
+  }
+
+}

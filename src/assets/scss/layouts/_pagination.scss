@@ -1,0 +1,48 @@
+.pagination__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: responsiveText(65, 40);
+
+
+  .pagination_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #939393;
+    color: $color-gray-300;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 22.4px */
+    letter-spacing: 0.2px;
+    position: relative;
+
+    &.current {
+      border: 1px solid #262626;
+      color: $color-gray-600;
+      background-color: #FF8A00;
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: -5px;
+        left: 5px;
+        background-color: #FF8A00;
+        border: 1px solid #262626;
+        transition: .2s ease;
+        z-index: -1;
+      }
+    }
+
+  }
+
+}

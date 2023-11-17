@@ -1,0 +1,35 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  gap: 5px;
+  color: $color-gray-300;
+  font-family: Gilroy;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+
+  [property="itemListElement"] {
+    background-color: $color-gray-50;
+    padding: 4px 8px;
+
+    &:nth-child(2) {
+      text-transform: capitalize;
+    }
+  }
+
+  [property="name"] {
+    color: $color-gray-600;
+  }
+
+  [property="item"] {
+
+
+    [property="name"] {
+      color: $color-gray-300;
+    }
+  }
+
+}

@@ -1,0 +1,50 @@
+.equalizer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 18px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+
+  .bar {
+    width: 10px;
+    height: 100%;
+    margin: 0 1px;
+    background-color: #262626;
+    transition: height .8s ease;
+  }
+
+  .bar:nth-child(2) {
+    height: 80%;
+  }
+
+  .bar:nth-child(3) {
+    height: 60%;
+  }
+
+  &.playing {
+    .bar {
+      animation: equalizerAnimation 1s infinite ease-in-out;
+    }
+
+    .bar:nth-child(2) {
+      animation: equalizerAnimation .9s .2s infinite ease-in-out;
+    }
+
+    .bar:nth-child(3) {
+      animation: equalizerAnimation .8s .4s infinite ease-in-out;
+    }
+  }
+}
+
+@keyframes equalizerAnimation {
+  0%, 100% {
+    height: 100%;
+  }
+  50% {
+    height: 50%;
+  }
+}

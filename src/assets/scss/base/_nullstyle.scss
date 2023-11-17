@@ -1,0 +1,193 @@
+@import 'fonts';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: none;
+  text-decoration: none;
+  font-family: 'Gilroy';
+
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  //-ms-text-size-adjust: 100%;
+  //-moz-text-size-adjust: 100%;
+  //-webkit-text-size-adjust: 100%;
+  background-color: #fff;
+  position: relative;
+}
+
+input, button, textarea {
+  font-family: inherit;
+  appearance: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: $color-gray-600;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  color: $color-gray-600;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  color: $color-gray-600;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: top;
+}
+
+.hide {
+  display: none !important;
+}
+
+.overflow-x-h {
+  overflow-x: hidden;
+}
+
+.overflow-h {
+  overflow: hidden;
+}
+
+.page_title {
+  font-family: Gilroy;
+  font-size: responsiveText(48, 32);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 2.16px;
+  -webkit-text-fill-color: rgba(0,0,0,0);
+  -webkit-text-stroke: 1px #262626;
+  text-transform: capitalize;
+  margin-top: responsiveText(60, 30);
+  margin-bottom: responsiveText(65, 35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 8rem;
+  }
+
+  h2 {
+    font-size: 6rem;
+  }
+
+  h3 {
+    font-size: 4rem;
+  }
+}

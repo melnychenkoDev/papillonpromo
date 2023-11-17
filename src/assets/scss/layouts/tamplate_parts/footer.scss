@@ -1,0 +1,196 @@
+.footer {
+  background-color: #262626;
+  padding: responsiveText(90, 25) 0;
+
+  &_top {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: responsiveText(70, 30);
+    border-bottom: 1px solid #6E6E6E;
+
+    .left {
+      color: #fff;
+      font-family: Gilroy;
+      font-size: responsiveText(64, 32);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: -0.5px;
+      padding-right: 50px;
+      position: relative;
+      width: max-content;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 55%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background-image: url('../../images/arrow-right.svg');
+      }
+    }
+
+    .right a {
+      color: #fff;
+      font-family: Gilroy;
+      font-size: responsiveText(64, 24);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: -0.5px;
+    }
+
+    @media (min-width: 992px) {
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+  }
+
+  &_middle {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: responsiveText(70, 30);
+    padding-top: responsiveText(70, 30);
+
+    @media (min-width: 768px) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+
+      @media (min-width: 768px) {
+        text-align: end;
+      }
+    }
+
+    .left, .right {
+      .tit {
+        color: $color-gray-300;
+        font-family: Gilroy;
+        font-size: responsiveText(24, 18);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -0.5px;
+      }
+
+      .txt {
+        display: none;
+        color: $color-gray-300;
+        font-family: Gilroy;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 24px */
+        letter-spacing: 0.2px;
+
+        @media (min-width: 768px) {
+          display: inline-block;
+        }
+
+        a {
+          color: #fff;
+        }
+
+      }
+    }
+
+  }
+
+  &_menu {
+
+    &_list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: responsiveText(62, 16);
+
+      .menu_list__item a {
+        color: #fff;
+        font-family: Gilroy;
+        font-size: responsiveText(24, 14);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -0.5px;
+        text-wrap: nowrap;
+      }
+
+    }
+
+    #menu-fr {
+      @media (min-width: 768px) {
+        justify-content: flex-end;
+      }
+    }
+
+  }
+
+  &_bottom {
+
+    &_text {
+      text-align: center;
+      color: #fff;
+      font-family: Gilroy;
+      font-size: responsiveText(120, 35);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: -0.5px;
+      -webkit-text-fill-color: #fff;
+      -webkit-text-stroke: 1px #000;
+      text-shadow: -2px -1px 0px #fff;
+
+      @media (min-width: 992px) {
+        text-shadow: -4px -2px 0px #fff;
+      }
+
+      @media (min-width: 1200px) {
+        font-size: responsiveText(180, 40);
+      }
+
+      @media (min-width: 1400px) {
+        font-size: responsiveText(200, 40);
+      }
+    }
+
+    .txt {
+      display: block;
+      width: 100%;
+      color: $color-gray-300;
+      font-family: Gilroy;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%; /* 24px */
+      letter-spacing: 0.2px;
+      margin-top: 30px;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+
+      a {
+        color: #fff;
+      }
+
+    }
+
+  }
+
+}
