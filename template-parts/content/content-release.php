@@ -9,7 +9,7 @@ $classes = $args['classes'] ? 'post_item ' . $args['classes'] : 'post_item';
 
 ?>
 
-<a class="<?=$classes?>" href="<?= $post_link_custom ?>">
+<a class="<?=$classes?>" href="<?= $post_link_custom ?>" target="_blank">
     <h2 class="post_item_title"><?= $post_title ?></h2>
     <div class="img_block">
         <img class="post_item_img" src="<?= $post_img_url ?>" alt="<?= $post_title ?>">

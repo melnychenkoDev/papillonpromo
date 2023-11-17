@@ -27,7 +27,7 @@ $pagination_html = $top_release_arr['pagination_html'];
             $post_link = $post['post_link'];
             ?>
 
-            <?php get_template_part('template-parts/content/content', 'release', array('post_id' => $post_id, 'post_img_url' => $post_img_url, 'post_title' => $post_title, 'post_link_custom' => $post_link_custom, 'classes' => 'nodisk')); ?>
+            <?php get_template_part('template-parts/content/content', 'release', array('post_id' => $post_id, 'post_img_url' => $post_img_url, 'post_title' => $post_title, 'post_link_custom' => $post_link_custom, 'classes' => 'nodisk top')); ?>
         <?php endfor; ?>
     </div>
 
